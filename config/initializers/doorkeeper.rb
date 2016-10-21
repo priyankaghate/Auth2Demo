@@ -12,7 +12,7 @@ Doorkeeper.configure do
     #   User.find_by_id(session[:user_id]) || redirect_to(new_user_session_url)
   end
 
-  grant_flows ['client_credentials']
+  #grant_flows ['client_credentials']
 
   # If you want to restrict access to the web interface for adding oauth authorized applications, you need to declare the block below.
   # admin_authenticator do
