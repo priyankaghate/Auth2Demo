@@ -7,6 +7,9 @@ class SessionsController < ApplicationController
     if @user && @user.authenticate(params[:password]) #authenticate is a method provided by bcrypt that checks whether a correct password was entered.
       session[:user_id] = @user.id
       flash[:success] = "Welcome back!"
+      p "................session create.............................."
+      p params
+      p"............................................................."
       redirect_to root_path
     else
       flash[:warning] = "You have entered incorrect email and/or password."

@@ -7,9 +7,9 @@ class ApplicationController < ActionController::Base
 	   { json: { error: "Not authorized" } }
     end
 
-    def new_oauth_token_path(params)
-	  "http://localhost:3000/oauth/authorize?client_id=#{params['client_id']}&redirect_uri=#{ENV['oauth_redirect_uri']}&response_type=code&scope=public+write"
-	end
+ #    def new_oauth_token_path(params)
+	#   "http://localhost:3000/oauth/authorize?client_id=#{params['client_id']}&redirect_uri=#{ENV['oauth_redirect_uri']}&response_type=code&scope=public+write"
+	# end
 
 	
 
