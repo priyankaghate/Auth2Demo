@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       p "................session create.............................."
       p params
       p"............................................................."
-      redirect_to root_path
+      redirect_to "http://localhost:3000/oauth/authorize?client_id=#{params['client_id']}&redirect_uri=http%3A%2F%2Flocalhost%3A3001%2Foauth%2Fcallback&response_type=code&scope=public+write"
     else
       flash[:warning] = "You have entered incorrect email and/or password."
       render :new
